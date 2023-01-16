@@ -52,6 +52,15 @@ public class Tasks {
         return user;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+
     public void setTask_Description(String details){
         this.Task_Description = details;
     }
