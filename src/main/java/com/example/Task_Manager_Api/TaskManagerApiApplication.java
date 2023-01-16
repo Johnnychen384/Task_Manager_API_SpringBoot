@@ -1,9 +1,12 @@
 package com.example.Task_Manager_Api;
+import com.example.Task_Manager_Api.config.WebConfig;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
 
+@Import(WebConfig.class)
 @SpringBootApplication
 public class TaskManagerApiApplication extends SpringBootServletInitializer {
 
