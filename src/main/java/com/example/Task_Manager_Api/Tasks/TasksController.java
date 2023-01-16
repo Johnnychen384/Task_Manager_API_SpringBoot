@@ -21,7 +21,7 @@ public class TasksController {
     }
 
     @GetMapping(path = "{userId}")
-    public List<Tasks> getTasks(@PathVariable Long userId){
+    public List<Tasks> getTasks(@PathVariable String userId){
         Optional<Users> user = userRepository.findByUsername(userId);
         if(user.isPresent()){
             return tasksService.getAllTasks(user.get());
