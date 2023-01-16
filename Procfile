@@ -1,1 +1,1 @@
-web: java -jar target/Task_Manager_Api.jar
+web: java -jar Task_Manager_Api.jar
