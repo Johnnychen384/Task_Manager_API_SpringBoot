@@ -22,7 +22,7 @@ public class TasksController {
 
     @GetMapping(path = "{userId}")
     public List<Tasks> getTasks(@PathVariable Long userId){
-        Optional<Users> user = userRepository.findById(userId);
+        Optional<Users> user = userRepository.findByUsername(userId);
         if(user.isPresent()){
             return tasksService.getAllTasks(user.get());
         }else{
