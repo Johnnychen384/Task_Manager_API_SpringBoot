@@ -40,12 +40,15 @@ public class UserService {
 
     }
 
-    public void addNewUser(Users user){
+    public Users addNewUser(Users user){
         Optional<Users> userByUsername = userRepository.findByUsername((user.getUsername()));
         if(userByUsername.isPresent()){
             throw new IllegalStateException("Username taken.");
         }
         userRepository.save(user);
+        Optional<Users> newUser = userRepository.findByUsername(user.getUsername());
+        Users user1 = userByUsername.get();
+        return user1;
     }
 
     public void deleteUser(Long id){
