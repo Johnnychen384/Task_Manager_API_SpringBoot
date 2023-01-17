@@ -20,7 +20,7 @@ public class TasksController {
         this.tasksService = tasksService;
     }
 
-    @GetMapping(path = "{userId}")
+    @PostMapping(path = "all/{userId}")
     public List<Tasks> getTasks(@PathVariable Long userId){
         Optional<Users> user = userRepository.findById(userId);
         if(user.isPresent()){
